@@ -1,23 +1,27 @@
-using System; 
-class Program { 
-public static void Main (string [] args) { 
-int b = 0, y = 0, a = 1;  
-duplo z = 0; 
-string [] produtos = nova string [10]; 
-duplo [] preco = novo duplo [10]; 
-para (b = 0; b <10; b ++) { 
-Console. Limpar ();
-Console. Write ($ "Digite o nome do {b + 1} º produto:");
-produtos [b] = Console. Leia a linha ();
-Console. Write ("Digite o preco do produto:"); preco [b] = duplo. Parse (Console. ReadLine ());
-} 
-Console. Limpar ();
-Console. WriteLine ("Digite o valor máximo do produto:");
-z = duplo. Parse (Console. ReadLine ()); Console. WriteLine ($ "Produtos com o valor até {z}");
-para (int n = 0; n <10; n ++) { 
-if (preco [n] <= z) { 
-Console. WriteLine ("PRODUTO:" + produtos [n] + "PREÇO:" + preco [n]);
-                     } 
-               } 
-        }
- }
+using System;
+class MainClass {
+  public static void Main (string[] args) {
+   string[] nome = new string[10];
+   double[] preco = new double[10];
+   double pesquisa = 0;
+
+   for (int a = 0; a<10; a++){
+     Console.Write($" Coloque o nome do {a+1}° produto: ");
+     nome[a] = Console.ReadLine();
+     Console.Write($" Coloque o preço do {a+1}° produto: ");
+     preco[a] = double.Parse(Console.ReadLine());
+     Console.Clear();
+   }
+
+   Console.Write("Insira o valor para a pesquisa ");
+   pesquisa = double.Parse(Console.ReadLine());
+   Console.Clear();
+   
+   for(int b = 0; b<10; b++){
+     if (preco[b]<=pesquisa){
+       Console.WriteLine($"Nome: {nome[b]}\n Preço: {preco[b]}\n ");
+     }
+   }
+
+  }
+}
