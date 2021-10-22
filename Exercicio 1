@@ -1,18 +1,18 @@
-using System; 
-class Program { 
-public static void Main (string [] args) {
-int s; 
-int [] numeros = novo int [15]; 
-para (s = 0; s <15; s ++) { 
-Console. Write ($ "Insira o {s + 1} ° valor:");
-numeros [s] = int. Parse (Console. ReadLine ());
-Console. Limpar ();
- } 
-Console. Limpar ();
-Console. WriteLine ("Dentre os números digitados, os pares são:");
-para (s = 0; s <15; s ++) {
-if (numeros [s]% 2 == 0) {
-Console. WriteLine (numeros [s]);
-          } 
-     }
- }
+using System;
+class MainClass {
+  public static void Main (string[] args) {
+    int[] vetor = new int [15];
+
+    for(int i = 0; i<15; i++){
+    Console.Write($"Digite o {i+1}° valor:");
+    vetor[i] = int.Parse(Console.ReadLine());
+    Console.Clear();
+    }
+
+    for(int x = 0; x<15; x++){
+      if(x%2==0){
+        Console.WriteLine(vetor[x]);
+      }
+    }
+  }
+}
