@@ -1,0 +1,32 @@
+using System;
+class MainClass {
+  string[] nomes = new string[10];
+  double[,] notas = new double[10,3];
+  double[] medias = new double[10];
+
+  for(int a = 0; a<10; a++){
+    Console.Write($"Insire o nome do aluno {a}: ");
+    nomes[a] = Console.ReadLine();
+    for(int b = 0; b<3; b++){
+      Console.Write($"Insira a nota do {nomes[a]}: ");
+      notas[a,b] = double.Parse(Console.ReadLine());
+      medias[a]+= notas[a,b];
+    }  
+    medias[a] = medias[a]/3;
+    Console.Clear();
+    }
+
+    Console.WriteLine("Nome | Notas | Média ");
+
+    for(int a = 0; a<10; a++){
+      if(medias[a]>7){
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.WriteLine($"{nomes[a]} | {notas[a,0]}, {notas[a,1]}, {notas[a,2]} | {medias[a]} ");
+      }else{
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"{nomes[a]} | {notas[a,0]}, {notas[a,1]}, {notas[a,2]} | {medias[a]} ");
+      }
+
+    }
+  }
+}
