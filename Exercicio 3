@@ -1,0 +1,22 @@
+using System;
+class MainClass {
+  public static void Main (string[] args) {
+   int[,] matriz = new int[1,5];
+   int[] somas = new int[3];
+
+   for(int m = 0; m<3; m++){
+     for(int n = 0; n<5; n++){
+       Console.Write($"Digite o valor da linha {m} do espaço {n}: ");
+       matriz[m,n] = int.Parse(Console.ReadLine());
+     }
+   }
+   
+   for(int m= 0; m<3; m++){
+     for(int n = 0; n<5; n++){
+       somas[m] = matriz[m,n];
+     }
+   }
+
+   Console.WriteLine($"Soma da linha 0: {somas[0]}\nSoma da linha 1: {somas [1]}\nSoma da linha 2: {somas [2]} ");
+  }
+}
